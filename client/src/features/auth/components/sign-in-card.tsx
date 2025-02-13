@@ -24,7 +24,7 @@ const SignInCard = ({ setState }: SignInCardProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleProviderSignIn = (value: "github" | "google") => {
+  const onProviderSignIn = (value: "github" | "google") => {
     signIn(value);
   };
 
@@ -63,7 +63,7 @@ const SignInCard = ({ setState }: SignInCardProps) => {
         <div>
           <Button
             disabled={false}
-            onClick={() => {}}
+            onClick={() => onProviderSignIn("google")}
             variant={"outline"}
             size={"lg"}
             className="w-full relative"
@@ -73,7 +73,7 @@ const SignInCard = ({ setState }: SignInCardProps) => {
           </Button>
           <Button
             disabled={false}
-            onClick={() => handleProviderSignIn("github")}
+            onClick={() => onProviderSignIn("github")}
             variant={"outline"}
             size={"lg"}
             className="w-full relative"
